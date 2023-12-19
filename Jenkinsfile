@@ -16,7 +16,7 @@ pipeline{
     	sh 'docker build -t omarbensalah8/deno-api-checkpoint .'
       }
      }
-      stage('Docker Push') {
+      stage('Docker Login') {
     	agent any
       steps {
       	withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
