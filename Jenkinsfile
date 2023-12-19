@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages {
 
-        stage('Getting project's repository from GitHub') {
+        stage('Getting project s repository from GitHub') {
             steps{
       			checkout([$class: 'GitSCM', branches: [[name: '*/main']],
 			extensions: [],
